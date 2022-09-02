@@ -1,0 +1,79 @@
+.body_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  justify-content: center;
+  padding-top: 90px;  
+}
+
+.album_musics {
+  width: 100%;
+}
+
+.album_container {
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  height: 28em;
+  justify-content: center;
+  left: 0;
+  margin: 0 3vh;
+  padding: 5vh;
+  position: fixed;
+  width: 30%;
+}
+
+.album_img {
+  width: 70%;
+}
+
+.musics_container {
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 28em;
+  padding: 5vh;
+  margin-left: 40%;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  width: 50%;
+}
+
+.music {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px grey solid;
+  border-radius: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vh 5vh;
+}
+
+.inside_music {
+  display: flex;
+  align-items: center;
+  gap: 5vh;
+}
+
+.musics_container::-webkit-scrollbar {
+  width: 12px;
+  margin-right: 5px;
+}
+
+.musics_container::-webkit-scrollbar-track {
+  background: black;        /* color of the tracking area */
+  border-radius: 3vh;
+}
+
+.musics_container::-webkit-scrollbar-thumb {
+  background-color: rgb(28, 28, 102);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid black;  /* creates padding around scroll thumb */
+}

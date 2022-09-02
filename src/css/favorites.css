@@ -1,0 +1,29 @@
+.body_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  justify-content: center;
+  padding-top: 90px;  
+}
+
+.album_card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid gray;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 3vh;
+  padding: 2vh;
+}
+
+.favorites_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid gray;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5vh;
+}

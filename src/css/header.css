@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header_title {
+  font-family: 'Pacifico', cursive;
+}
+
+.upper_header {
+  background-color: rgb(3, 3, 80);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0vh 10vh;
+  align-items: center;
+}
+
+.botton_header {
+  background-color: rgb(28, 28, 102);
+  display: flex;
+  justify-content: space-around;
+  padding: 1vh 0vh;
+  color: white;
+  flex-grow: initial;
+}
+
+.links {
+  color: white;
+  font-weight: bold;
+}
+
+.links:hover {
+  color: grey;
+  font-weight: bold;
+}

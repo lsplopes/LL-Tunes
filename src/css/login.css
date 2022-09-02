@@ -1,0 +1,51 @@
+.login_page {
+  color: white;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.login_form {
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+  padding: 7vh 5vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.login_title {
+  font-family: 'Pacifico', cursive;
+  font-size: 8vh;
+}
+
+.login_btn {
+  padding: 1vh 5vh;
+  background-color: black;
+  border: grey solid 2px;
+  border-radius: 3vh;
+  color: white;
+}
+
+.login_btn:hover {
+  padding: 1vh 5vh;
+  background-color: grey;
+  border: black solid 2px;
+  border-radius: 3vh;
+  color: white;
+}
+
+.login_btn:disabled {
+  padding: 1vh 5vh;
+  background-color: grey;
+  border: grey solid 2px;
+  border-radius: 3vh;
+  color: grey;
+}

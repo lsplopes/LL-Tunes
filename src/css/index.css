@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  background: linear-gradient(0, #120c56, #000000);
+  background-attachment: fixed;
+  color: white;
+  height: 100vh;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+}
