@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getUser } from "../services/userAPI";
 import Loading from "./Loading";
 import "../css/header.css"

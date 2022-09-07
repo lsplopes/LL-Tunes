@@ -14,4 +14,4 @@ export default function CardAlbum() {
       <p>{currAlbum.artistName}</p>
     </div>
   )
-};
+}

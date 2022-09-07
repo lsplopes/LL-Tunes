@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(0, #120c56, #000000);
+  background: -webkit-linear-gradient(bottom, #120c56, #000000);
   background-attachment: fixed;
   color: white;
   height: 100vh;
