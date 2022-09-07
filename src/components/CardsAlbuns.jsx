@@ -9,8 +9,8 @@ export default function CardsAlbuns() {
   return (
     // <div>
        currAlbuns.map((album) => (
-        <a
-          href={`/album/${album.collectionId}`}
+        <Link
+          to={`/album/${album.collectionId}`}
           key={album.collectionId}
           className="links"
           data-testid={`${album.collectionId}`}
@@ -29,7 +29,7 @@ export default function CardsAlbuns() {
               {album.collectionName}
             </h4>
           </div>
-        </a>
+        </Link>
       ))
     // </div>
   )

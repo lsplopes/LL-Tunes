@@ -10,16 +10,16 @@ import ProfileEdit from './pages/ProfileEdit';
 
 function App() {
   return (
-    <TunesProvider>
-      <Switch>
+    <Switch>
+        <TunesProvider>
         <Route exact path="/" component={ Login } />
         <Route path="/search" component={ Search } />
         <Route path="/album/:id" component={ Album } />
         <Route path="/favorites" component={ Favorites } />
         <Route exact path="/profile" component={ Profile } />
         <Route path="/profile/edit" component={ ProfileEdit } />
-      </Switch>
     </TunesProvider>
+      </Switch>
   );
 }
 

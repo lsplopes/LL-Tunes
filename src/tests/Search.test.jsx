@@ -3,6 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
 import Search from '../pages/Search'
 import TunesProvider from '../context/tunesProvider';
+import renderWithRouter from '../helpers/renderWithRouter';
 
 describe('Search page tests', () => {
   beforeEach(() => window.localStorage.clear());
@@ -35,7 +36,7 @@ describe('Search page tests', () => {
   });
 
   it('Verifies if after searching for a band, the page show its albums', async () => {
-    render(<TunesProvider><Search /></TunesProvider>);
+    renderWithRouter(<TunesProvider><Search /></TunesProvider>);
 
     const searchInput = screen.getByRole('textbox', { name: /music search:/i });
     const searchBtn = screen.getByRole('button', { name: /search/i });
@@ -49,19 +50,17 @@ describe('Search page tests', () => {
   });
 
   it('Verifies if after a second search, the page shows the correct albums', async () => {
-    render(<TunesProvider><Search /></TunesProvider>);
+    renderWithRouter(<TunesProvider><Search /></TunesProvider>);
 
     const searchInput = screen.getByRole('textbox', { name: /music search:/i });
     const searchBtn = screen.getByRole('button', { name: /search/i });
 
     userEvent.type(searchInput, 'offspring');
     userEvent.click(searchBtn);
-
+    
     await waitFor(() => {
-      setTimeout(() => {
         expect(screen.getByText(/americana/i)).toBeInTheDocument();
-      }, 3000);
-    });
+    }, { timeout: 3000 });
 
     await waitFor(() => {
         expect(searchInput).toHaveValue('');
@@ -73,5 +72,35 @@ describe('Search page tests', () => {
     await waitFor(() => {
         expect(screen.getByText(/concrete and gold/i)).toBeInTheDocument();
     });
+  });
+
+  it('Verifies if after on an album, the page redirect correctly', async () => {
+    const { history } = renderWithRouter(
+      <TunesProvider>
+        <Search />
+      </TunesProvider>
+    );
+
+    const searchInput = screen.getByRole('textbox', { name: /music search:/i });
+    const searchBtn = screen.getByRole('button', { name: /search/i });
+
+    userEvent.type(searchInput, 'offspring');
+    userEvent.click(searchBtn);
+
+    await waitFor(() => {      
+      expect(screen.getByTestId('loading')).toBeInTheDocument();
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/americana/i)).toBeInTheDocument();
+  }, { timeout: 3000 });
+
+  userEvent.click(screen.getByRole('link', { name: /americana the offspring americana/i }));
+
+  await waitFor(() => {      
+    expect(screen.getByTestId('loading')).toBeInTheDocument();
+  }, { timeout: 1000});
+  
+  expect(history.location.pathname).toBe("/album/1440880887");  
   });
 })

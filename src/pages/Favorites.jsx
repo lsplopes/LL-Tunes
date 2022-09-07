@@ -23,9 +23,7 @@ function Favorites() {
         }
         return 0
       })
-      if (favoritesData !== favorites) {
-        setFavorites(favoritesData)
-      };
+      setFavorites(favoritesData)
       setIsLoading(false);
     }
     fetchMusics();
