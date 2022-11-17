@@ -1,3 +1,21 @@
+PT-BR:
+# Bem-vindo ao meu projeto LL Tunes!
+
+Só para esclarecer, LL significa Lucas Lopes!
+
+Este projeto também fez parte do curso Trybe que estou cursando.
+
+Este aplicativo usa a API do iTunes para fornecer uma versão simples de um aplicativo como o Spotify, onde você pode pesquisar qualquer artista e ouvir uma prévia de qualquer música desse artista. Você também pode favoritar suas músicas, ouvi-las nas páginas de favoritos e também definir seu perfil.
+
+O aplicativo usa React com context API para gerenciar estados globais.
+
+Os testes para esta aplicação ainda não foram terminados, mas pretendo faze-los assim que tiver tempo livre.
+
+Obrigado por dar uma olhada e fique à vontade para clonar este repositório e vê-lo rodando em seu computador!
+
+Aqui estão algumas fotos do aplicativo:
+
+EN-US:
 # Welcome to my LL Tunes Project!
 
 Just to clarify, LL stands for Lucas Lopes!
